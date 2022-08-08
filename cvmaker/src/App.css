@@ -57,7 +57,7 @@ input {
 
 .button__add {
   margin: auto;
-  width: 60%;
+  width: 30%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -65,11 +65,12 @@ input {
   margin-top: 2vh;
   display: flex;
   flex-direction: column;
+  display: block;
 }
 
 .button__remove  {
   margin: auto;
-  width: 60%;
+  width: 30%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -77,6 +78,29 @@ input {
   margin-top: 2vh;
   display: flex;
   flex-direction: column;
+  display: block;
+}
+
+.button__remove:hover {
+  background-color: #ce1616;
+  color: white;
+}
+
+.button__add:hover {
+  background-color: #16ce16;
+  color: rgb(0, 0, 0);
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  display: block;
 }
 
 .output__field {

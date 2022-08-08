@@ -10,32 +10,29 @@ function App() {
 
       <div className='input__field'>
         <p>Personal Information</p>
-        <input type='text' placeholder='Enter your first name' />
-        <input type='text' placeholder='Enter your last name' />
+        <input type='text' placeholder='Enter your full name' />
         <input type='text' placeholder='Enter your email' />
         <input type='text' placeholder='Enter your phone number' />
         <input type='text' placeholder='Enter your address' />
         <input type='text' placeholder='Enter your website' />
-        <input type='text' placeholder='Enter your summary' />
-        <input type='text' placeholder='Enter your skills' />
-        <input type='text' placeholder='Enter your experience' />
-        <input type='text' placeholder='Enter your education' />
-        <input type='text' placeholder='Enter your languages' />
-        <input type='text' placeholder='Enter your interests' />
+        <button >upload profile picture</button>
 
         <p>Experience</p>
-        <input type='text' placeholder='Enter your career objective' />
-        <input type='text' placeholder='Enter your career objective' />
-        <input type='text' placeholder='Enter your career objective' />
-        <input type='text' placeholder='Enter your career objective' />
+        <input type='text' placeholder='Position' />
+        <input type='text' placeholder='Company' />
+        <input type='text' placeholder='City' />
+        <input type='text' placeholder='From' />
+        <input type='text' placeholder='To' />
         <button className="button__add">Add</button>
         <button className="button__remove">Remove</button>
 
         <p>Education</p>
-        <input type='text' placeholder='Enter your education' />
-        <input type='text' placeholder='Enter your education' />
-        <input type='text' placeholder='Enter your education' />
-        <input type='text' placeholder='Enter your education' />
+        <input type='text' placeholder='Name School' />
+        <input type='text' placeholder='City' />
+        <input type='text' placeholder='Degree' />
+        <input type='text' placeholder='Subject' />
+        <input type='text' placeholder='From' />
+        <input type='text' placeholder='To' />
         <button className="button__add">Add</button>
         <button className="button__remove">Remove</button>
 
@@ -56,7 +53,14 @@ function App() {
             </div>
 
         </div>
-        <div></div>
+        <div className='right__part'>
+          <h2>Work experience</h2>
+
+
+
+          <h2>Education</h2>
+
+        </div>
       </div>
 
     <Footer />
