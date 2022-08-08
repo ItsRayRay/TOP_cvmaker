@@ -54,11 +54,28 @@ function App() {
 
         </div>
         <div className='right__part'>
-          <h2>Work experience</h2>
+          <div className="experience">
+            <h2 className="experience__text">Experience</h2>
+            <p className="experience__text">Position: </p>
+            <p className="experience__text">Company:</p>
+            <p className="experience__text">City:</p>
+            <p className="experience__text">From:</p>
+            <p className="experience__text">To:</p>
 
+            </div>
 
+          <div className="education">
+            <h2 className="education__text">Education</h2>
+            <p className="education__text">Name School:</p>
+            <p className="education__text">City:</p>
+            <p className="education__text">Degree:</p>
+            <p className="education__text">Subject:</p>
+            <p className="education__text">From:</p>
+            <p className="education__text">To:</p>
 
-          <h2>Education</h2>
+            </div>
+         
+        
 
         </div>
       </div>
