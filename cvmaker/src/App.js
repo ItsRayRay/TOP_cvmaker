@@ -1,13 +1,13 @@
 import "./App.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import Personalinfo from "./Personalinfo";
+import Forminputs from "./Forminputs";
 
 function App() {
   return (
     <>
       <Header />
-      <Personalinfo />
+      <Forminputs />
       <Footer />
     </>
   );
