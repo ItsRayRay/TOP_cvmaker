@@ -3,39 +3,35 @@ import React from 'react'
 export default function CVpage(props) {
 
 
-
-    const thingsElement = props.education.map(thing => 
+    const educationElement = props.education.map(thing => 
         
         <div className="education__container">
             <div className="education__item">
-                <p className="education__school">{thing.school}</p>
-                <p className="education__city">{thing.city}</p>
-                <p className="education__degree">{thing.degree}</p>
-                <p className="education__subject">{thing.subject}</p>
-                <p className="education__from">{thing.fromEdu}</p>
-                <p className="education__to">{thing.toEdu}</p>
+                <p className="education__school">School: {thing.school}</p>
+                <p className="education__city"> City: {thing.city}</p>
+                <p className="education__degree"> Degree: {thing.degree}</p>
+                <p className="education__subject"> Subject: {thing.subject}</p>
+                <p className="education__from"> From: {thing.fromEdu}</p>
+                <p className="education__to">To: {thing.toEdu}</p>
             </div>
         </div>
     )
 
 
-    
+    const experienceElement = props.experience.map(thing =>
+        <div className="experience__container">
+            <div className="experience__item">
+                <p className="experience__position">Position: {thing.position}</p>
+                <p className="experience__company">Company: {thing.company}</p>
+                <p className="experience__city">City: {thing.city}</p>
+                <p className="experience__from">From: {thing.from}</p>
+                <p className="experience__to">To: {thing.to}</p>
+            </div>
+        </div>
+    )
+
+
    
-
-    // const experience = props.experience.map((exp, index) => {
-    //     <div className="experience">
-    //     <h2 className="experience__text">Experience</h2>
-    //     <p className="experience__text">Position: {props.position} </p>
-    //     <p className="experience__text">Company: {props.company}</p>
-    //     <p className="experience__text">City: {props.city}</p>
-    //     <p className="experience__text">From: {props.from}</p>
-    //     <p className="experience__text">To: {props.to}</p>
-    //     </div>
-    // })
-
-
-
-
 
   return (
     <>
@@ -52,13 +48,15 @@ export default function CVpage(props) {
             <h2 className="profile__info__text"> {props.name}</h2>
             <p className="profile__info__text">Email: {props.email}</p>
             <p className="profile__info__text">Phone:  {props.phone} </p>
-            <p className="profile__info__text">Address: </p>
-            <p className="profile__info__text">Website: </p>
+            <p className="profile__info__text">Address: {props.address} </p>
+            <p className="profile__info__text">Website: {props.website}</p>
           </div>
         </div>
         <div className="right__part">
-             {/* {experience} */}
-              {thingsElement}
+            <h1>Experience</h1>
+             {experienceElement}
+            <h1>Education</h1>
+              {educationElement}
         </div>
       </div>
     </>

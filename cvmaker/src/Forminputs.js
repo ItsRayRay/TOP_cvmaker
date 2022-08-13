@@ -3,6 +3,7 @@ import CVpage from './CVpage'
 
 
 
+
 export default function Forminputs() {
 
    const [personalInfo, setPersonalInfo] = React.useState({
@@ -28,7 +29,7 @@ export default function Forminputs() {
             degree: 'test',
             subject: 'test',
             fromEdu: 'test',
-            toEdu: 'test'
+            toEdu: 'test',
         },
     {
         school: 'test1',
@@ -36,9 +37,47 @@ export default function Forminputs() {
         degree: 'test1',
         subject: 'test1',
         fromEdu: 'test1',
-        toEdu: 'test1'
+        toEdu: 'test1',
     }
     ])
+
+
+
+    function addEducation() {
+        setEducation(prevState => [
+            ...prevState,
+            {
+                school: 'test',
+                city: 'test',
+                degree: 'test',
+                subject: 'test',
+                fromEdu: 'test',
+                toEdu: 'test',
+            }
+        ])
+    }
+
+    function addExperience() {
+        setExperience(prevState => [
+            ...prevState,
+            {
+                position: 'test',
+                company: 'test',
+                city: 'test',
+                from: 'test',
+                to: 'test',
+            }
+        ])
+    }
+
+    function handleChangeExperience(event) {
+        const { name, value } = event.target
+        setExperience(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
+    }
+
 
     const [experience, setExperience] = React.useState([
         {
@@ -102,15 +141,15 @@ export default function Forminputs() {
         <input type="text" placeholder="Subject" />
         <input type="text" placeholder="From" />
         <input type="text" placeholder="To" />
-        <button className="button__add">Add</button>
+        <button onClick={addEducation} className="button__add">Add</button>
         <button className="button__remove">Remove</button>
         <p>Experience</p>
         <input
           type="text"
           placeholder="Position"
           name="position"
-        //  value={experience.position}
-         // onChange={handleChangeExperience}
+         value={experience.position}
+          onChange={handleChangeExperience}
         />
 
         <input
@@ -142,7 +181,7 @@ export default function Forminputs() {
         //  onChange={handleChangeExperience}
         />
 
-        <button  className="button__add">Add</button>
+        <button onClick={addExperience}  className="button__add">Add</button>
         <button className="button__remove">Remove</button>
   
       </div>
